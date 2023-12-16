@@ -1,0 +1,358 @@
+*{
+    font-family: sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+}
+
+.icon{
+    color: rgba(255, 255, 255, 0.578);
+    cursor: pointer;
+}
+
+.icon-large:hover{
+    transform: scale(1.2);
+}
+
+.icon:hover{
+    color: white;
+}
+
+.hover-col-red:hover{
+    color: red;
+}
+
+.bg-colorful{
+    transition: 1s;
+}
+
+.bg-colorful:hover{
+    background: -webkit-linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.main{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 15rem;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    border-right: thin solid white ;
+}
+
+.logo{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.logo i{
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    display: none;
+}
+
+.appName{
+    padding-top: 1rem;
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+.navbar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+.nav-items{
+    height: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;    border-radius: 0.3rem;
+
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.notify-top{
+    position: absolute;
+    font-size: 0.6rem;
+    top: 0.5rem;
+    left: 0.5rem;
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.nav-items:hover{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.078);
+    font-weight: 550;
+}
+
+.nav-items:hover i{
+    color: white;
+}
+
+.nav-items i{
+    margin-right: 1.6rem;
+}
+
+.navbar1,.navbar2{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar2{
+    justify-self: end;
+}
+
+
+@media(max-width:1100px){
+
+    .sidebar{
+        width: 3.5rem;
+    }
+
+    .nav-items{
+        width: 1rem;
+        height: 1rem;
+        padding: 0.7rem;
+        text-align: center;
+    }
+
+    .logo i{
+        display: inline;
+        
+    }
+    .appName{
+        display: none;
+    }
+
+    .nav-items a{
+        display: none;
+        text-align: center;
+    }
+
+}
+    
+
+
+
+.main-content{
+    height: 100vh;
+    flex: 1;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    overflow: auto;
+}
+
+.home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.story{
+    height: 6rem;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    margin: 0.7rem 0.5rem;
+}
+
+.story-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0.7rem;
+    cursor: pointer;
+}
+
+.story-items a{
+    font-size: 0.6rem;
+    margin: 0.3rem;
+}
+
+.story img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius:  50%;
+    background-color: rgb(72, 30, 30);
+    border:red 0.15rem solid;
+}
+
+.post{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+
+.post-card{
+    width: 32rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: thin white solid;
+    background-color: black;
+    margin: 0.6rem;
+    padding-bottom: 1rem;
+}
+
+.post-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.post-title-left{
+    display: flex;
+    align-items: center;
+}
+
+.post-title-left img, .profile img{
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.post-title-left .username,.profile .username{
+    font-weight: 550;
+    font-size: 0.8rem;
+}
+
+.post-title-left .location,.profile .actual-name{
+ font-size: 0.7rem;
+}
+
+.post-card .post-img{
+    border-radius: 0.5rem;
+    margin: auto;
+    background-color: black;
+    height: 80%;
+    width: 80%;
+}
+
+.post-icons{
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.post-icons i{
+    padding: 0 1rem;
+    font-size: 1.3rem;
+}
+
+.post-likes-num,.post-caption{
+    padding: 0.1rem 0.5rem;
+}
+.post-caption{
+font-size: 0.9;
+opacity: 0.8;
+}
+
+
+.accounts{
+    margin-top: 2rem;
+    width: 25rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.account-col-grid{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.account-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.6rem;
+}
+
+.account-card a{
+    font-size: 0.8rem;
+    color: #006ab0;
+    margin-right: 0.5rem;
+}
+
+.account-card a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.accounts-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.accounts-title .main-tital{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(193, 193, 193);
+    
+}
+
+.accounts-title a{
+    font-size: 0.8em;
+    color: rgb(193, 193, 193);
+}
+.accounts-title a:hover{
+    font-weight: bold;
+}
+
+@media (max-width:850px){
+    .accounts{
+        width: 0;
+    }
+}
